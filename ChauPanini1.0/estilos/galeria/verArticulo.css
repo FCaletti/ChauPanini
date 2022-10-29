@@ -1,0 +1,36 @@
+
+.grillaArt{
+    margin: auto;
+    min-height: 99vh;
+    min-width: 315px;
+    width: 99.5%;
+    display: grid;
+    align-content: space-between;
+}
+
+@media only screen and (min-width: 720px) {
+    .grillaArt{
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: minmax(95px, 20vh) minmax(35px, .4fr) 1px auto minmax(60px, 12vh);
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "pegajoso pegajoso"
+        "main main"
+        "footer footer";
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .grillaArt{
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: minmax(120px, 20vh) minmax(35px, .4fr) 1px auto minmax(60px, 12vh);
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "pegajoso pegajoso"
+        "main main"
+        "footer footer";
+    }
+}
+

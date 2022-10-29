@@ -1,0 +1,165 @@
+.VREtitulo{
+    height: 6vh;
+    font-size: calc(10px + 1.5vw);
+    text-align: center;
+    font-variant:small-caps;
+}
+
+
+.VREcontenedor{
+    display: grid;
+    margin: 10px auto 10px auto;
+    grid-column-gap: 1vw;
+    background-color:whitesmoke;
+    padding: 6px;
+    border: 1px solid grey;
+    box-shadow: -2px 2px 5px gray;
+    border-radius: 4px;
+}
+.VREinfoProd{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    padding: 10px;
+}
+.VREnombreElem{
+    font-size: calc(8px + 1.3vw);
+    font-weight: bold;
+    text-align: left;
+    margin: 5px auto 5px auto;
+}
+.VREnombreElem span + span{
+    font-size: calc(5px + .7vw);
+    font-weight: none;
+    font-style: italic;
+}
+.VREimagenElem{
+    margin: auto;
+    height: calc(25vh + 25vw);
+}
+.VREImagen{
+    width: auto;
+    height: 100%;
+}
+.VREinfoComer{
+    display: flex;
+    flex-direction: column;
+    background-color: burlywood;
+}
+.VREtexto1{
+    font-size: calc(7px + .8vw);
+    font-weight: bold;
+    margin: 10px auto 10px auto;
+    color: maroon;
+}
+.VREprecio{
+    font-size: calc(10px + .8vw);
+    font-style: italic;
+    margin: -5px auto 10px auto;
+    display: flex;
+    justify-content: right;
+}
+.VREpagos{
+    border: 1px solid var(--colorBotonGaleria);
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto 0 auto;
+    background-color: whitesmoke;
+}
+.VREtexto2{
+    font-size: calc(8px + .8vw);
+    margin: 10px auto 10px auto;
+    font-weight: bold;
+}
+.VREoferta{
+    font-family:Arial, Helvetica, sans-serif ;
+    font-size: calc(12px + 1.2vw);
+    color: darkred;
+    font-weight: bolder;
+    margin: -2px auto 15px auto;
+}
+.VREpagoTarjeta{
+    background-color: lightgray;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    margin: 0px auto 20px auto;
+}
+.VREtexto3{
+    font-size: calc(7px + .8vw);
+    margin: 0 auto 5px auto;
+    color: var(--colorBotonGaleria);
+}
+.VREselect{
+    font-size: calc(6px + .8vw);
+    padding: 5px;
+}
+.VREtarjetasTotal{
+    font-size: calc(6px + .8vw);
+    margin-top: -15px;
+    font-weight: 100;
+}
+.VREenvios{
+    display:flex;
+    justify-content: flex-start;
+    width: 60%;
+    margin: 0px auto 10px auto;
+    gap: 5px;
+}
+.VREenviosIcon{
+    font-size: calc(11px + 1vw);
+    color:grey;
+    width: 20%;
+    text-align: right;
+}
+.VREenviosTexto{
+    font-size: calc(9px + 1vw);
+    width: 80%;
+    color:grey;
+    margin: auto;
+    text-align: left;
+}
+/*
+.VREbotonera{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    justify-content: center;
+    height: 50px;
+    margin: 2vh 0 1.5vh 0;
+}
+.VREbotonera a button{
+    background-color: var(--colorBotonGaleria);
+    height: 80%;
+    color: var(--colorTextoBoton);
+    border: 1.5px solid var(--colorTextoBoton);
+    border-radius: 8px;
+    font-size: calc(9px + .7vw);
+    width: calc(50px + 11vw);
+}
+.VREbotonera a button:hover{
+    background-color:var(--colorTextoBoton);
+    color: var(--colorBotonGaleria);
+    border: 1.5px solid var(--colorBotonGaleria);
+}
+*/
+@media only screen and (min-width: 720px) {
+    .VREcontenedor{
+        grid-template-columns: minmax(300px, 6fr) minmax(150px, 4fr);
+    }
+        .VREjustCont{
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .VREjustCont{
+        width: 95%;
+    }
+    .VREcontenedor{
+        grid-template-columns: minmax(300px, 6fr);
+    }
+}

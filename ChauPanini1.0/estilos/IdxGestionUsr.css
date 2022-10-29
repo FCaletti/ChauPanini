@@ -1,0 +1,101 @@
+
+.USRdatos{
+    margin: 25px auto 5px auto;
+    padding: 25px 50px 25px 50px;
+    background-color:var(--colorTexto);
+    border: 1px solid grey;
+    box-shadow: -2px 2px 5px gray;
+    border-radius: 4px;
+    width: 50%;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    column-gap: 10px;
+}
+.USRingreso{
+    width: 30%;
+}
+.USRtitulo2{
+    font-family: Jugador;
+    text-align: center;
+    font-variant:small-caps;
+    grid-column:1 / 3;
+}
+.USRdatos label{
+    font-family: Jugador;
+    font-size: calc(10px + .5vw);
+    color: var(--colorMenu);
+    min-width: calc(80px + 5vw);
+    text-align: right;
+    white-space: nowrap;
+}
+.USRdatos input{
+    width: 98%;
+}
+
+.USRbotonera{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    justify-content: center;
+    height: 50px;
+    margin: 2vh 0 1.5vh 0;
+}
+.USRbotonera a button{
+    font-family: Jugador;
+    background-color: var(--colorMenu);
+    height: 80%;
+    color: var(--colorTexto);
+    border: 1.5px solid var(--colorTexto);
+    border-radius: 8px;
+    font-size: calc(9px + .7vw);
+    width: calc(70px + 11vw);
+}
+.USRbotonera a button:hover{
+    background-color: var(--colorTexto);
+    color: var(--colorMenu);
+    border: 1.5px solid var(--colorFondo);
+}
+
+
+@media only screen and (min-width: 720px) {
+    .USRdatos{
+        grid-template-rows: 40px repeat(4, 28px) 60px;
+        row-gap: 10px;
+    }
+    .USRingreso{
+        grid-template-rows: 40px repeat(2, 28px) 60px;
+        row-gap: 10px;
+    }
+    .USRdatos label{
+        text-align: right;
+        grid-column:1/2;
+    }
+    .USRdatos input{
+        grid-column:2/3;
+    }
+    .USRtitulo2{
+        font-size: calc(12px + 1vw);
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .USRdatos{
+        grid-template-rows: 40px repeat(4, 15px 28px) 60px;
+        row-gap: 5px;
+    }   
+    .USRingreso{
+        grid-template-rows: 40px repeat(2, 15px 28px) 60px;
+        row-gap: 5px;
+    }   
+    .USRdatos label{
+        text-align: left;
+        grid-column:1/3;
+    }
+    .USRdatos input{
+        grid-column:1/3;
+    }
+    .USRtitulo2{
+        font-size: calc(12px + 2vw);
+    }
+}

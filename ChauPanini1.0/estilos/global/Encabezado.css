@@ -1,0 +1,117 @@
+.ENCcontenedor{
+    display: grid;
+    height: 100%;
+    min-height: 60px;
+}
+.ENClogo{
+    height: calc(30px + 5vw + 5vh);
+    width: auto;
+    min-height: 75px;
+    min-width: 58px;
+    max-width: calc(30px + 5vw + 5vh);
+    max-height: 19vh;
+    margin: auto 3vw auto; 
+    grid-area: logo;
+}
+.ENCtitulo{
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 10px;
+    margin: auto;
+    font-size: calc(22px + 3.5vw);  
+    color: var(--colorTexto);
+    grid-area: titulo;
+}
+.ENCtitulo t1{
+    font-family: Chau;
+}
+.ENCtitulo t2{
+    font-family: Panini;
+}
+.ENCusuario{
+    font-family:Jugador;
+    height: 100%;
+    min-width: calc(20px + 10vw + 5vh);
+    display: flex;
+    color: var(--colorTexto); 
+    padding: 1px 5px 1px 5px;
+/*    
+    flex-direction: column;
+    grid-area: usuario;
+*/
+}
+
+.ENCbuscador{
+    width: 85%;
+    height: 5vh;
+    min-height: 30px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 9.5fr 0.25fr 0.25fr;
+    column-gap: .4vw;
+}
+.ENCbuscador input{
+    justify-self: right;
+    max-height: 25px;
+    margin: auto 0 auto 0;
+    width: 85%;
+}
+
+.ENCbuscador div{
+    display: flex;
+    justify-content: right;
+}
+
+.ENClblCheckBox {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    font-size: calc(10px + .5vw);
+    color: var(--colorTexto);
+    border: 1px solid transparent;
+}
+.ENClblCheckBox:hover{
+    border: 1px solid var(--colorTexto);
+}
+
+
+.CartelID{
+    font-size: calc(15px + .8vw);
+    text-align: center;
+    margin: auto;
+}
+
+.CartelVisita{
+    font-size: calc(8px + 1vw);
+    margin: auto 10px auto;
+    text-align: right;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 720px) {
+    .ENCcontenedor{
+        grid-template-columns: 2.5fr 5fr 2.5fr;
+        grid-template-areas: 
+        "logo titulo usuario";
+    }
+    .ENCusuario{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .ENCcontenedor{
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows:1.5fr 4.5fr;
+        grid-template-areas: 
+        "usuario usuario"
+        "logo titulo";
+    }
+    .ENCusuario{
+        flex-direction: row;
+        grid-column: 1/3;
+    }
+
+}

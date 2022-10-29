@@ -1,0 +1,79 @@
+@font-face {
+  font-family: 'iconos';
+  src: url('/recursos/SVG/iconos.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'iconos';
+    src: url('../font/iconos.svg?62004187#iconos') format('svg');
+  }
+}
+*/
+[class^="ic-"]:before, [class*=" ic-"]:before {
+  font-family: "iconos";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: none;
+/*  margin-right: .2em;*/
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-basura:before { content: '\e800'; } /* '' */
+.ic-camion:before { content: '\e801'; } /* '' */
+.ic-candado-a:before { content: '\e802'; } /* '' */
+.ic-candado-c:before { content: '\e803'; } /* '' */
+.ic-carrito:before { content: '\e804'; } /* '' */
+.ic-config-1:before { content: '\e805'; } /* '' */
+.ic-config-3:before { content: '\e806'; } /* '' */
+.ic-corazon:before { content: '\e807'; } /* '' */
+.ic-cruz:before { content: '\e808'; } /* '' */
+.ic-facebook:before { content: '\e809'; } /* '' */
+.ic-info:before { content: '\e80a'; } /* '' */
+.ic-instagram:before { content: '\e80b'; } /* '' */
+.ic-llave:before { content: '\e80c'; } /* '' */
+.ic-mail:before { content: '\e80d'; } /* '' */
+.ic-ojo:before { content: '\e80e'; } /* '' */
+.ic-pinterest:before { content: '\e80f'; } /* '' */
+.ic-snapchat:before { content: '\e810'; } /* '' */
+.ic-tiktok:before { content: '\e811'; } /* '' */
+.ic-tilde:before { content: '\e812'; } /* '' */
+.ic-twitter:before { content: '\e813'; } /* '' */
+.ic-user:before { content: '\e814'; } /* '' */
+.ic-angulo-der:before { content: '\e815'; } /* '' */
+.ic-angulo-der2:before { content: '\e816'; } /* '' */
+.ic-carrito2:before { content: '\e817'; } /* '' */
+.ic-grafico:before { content: '\e818'; } /* '' */
+.ic-grafico1:before { content: '\e819'; } /* '' */
+.ic-grafico2:before { content: '\e81a'; } /* '' */
+.ic-lupa:before { content: '\e81b'; } /* '' */
+.ic-lupa2:before { content: '\e81c'; } /* '' */
+.ic-carrito3:before { content: '\e81d'; } /* '' */
+.ic-home:before { content: '\e81e'; } /* '' */
+.ic-home2:before { content: '\e81f'; } /* '' */
+.ic-mail2:before { content: '\e820'; } /* '' */
+.ic-grabar:before { content: '\e821'; } /* '' */
+.ic-clipboard:before { content: '\e822'; } /* '' */
+.ic-clipboard2:before { content: '\e823'; } /* '' */
+.ic-texto:before { content: '\e824'; } /* '' */
+.ic-address-card:before { content: '\e825'; } /* '' */
+.ic-baby:before { content: '\e826'; } /* '' */
+.ic-user-plus:before { content: '\e827'; } /* '' */
+.ic-entrar:before { content: '\e828'; } /* '' */
+.ic-salir:before { content: '\e829'; } /* '' */
+.ic-user-slash:before { content: '\e82a'; } /* '' */
+.ic-esfera:before { content: '\e82b'; } /* '' */
+.ic-libro:before { content: '\e82c'; } /* '' */
+.ic-libro-ab:before { content: '\e82d'; } /* '' */
+.ic-sobre-ab:before { content: '\e82e'; } /* '' */
+.ic-globo:before { content: '\e82f'; } /* '' */
+.ic-figus:before { content: '\e830'; } /* '' */

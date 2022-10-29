@@ -1,0 +1,55 @@
+
+header{
+    max-height: 20vh;
+    min-height: 80px;
+    grid-area: header;
+}
+nav{
+    grid-area: nav;
+    background-color: var(--colorMenu2);
+    max-height: 35px;
+}
+main{
+    grid-area: main;
+    min-height: 60vh;
+}
+aside{
+    grid-area: aside;
+}
+footer{
+    height: 12vh;
+    grid-area: footer;
+}
+social{
+    grid-area: social;
+    position: sticky;
+}
+social div{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5vw;
+}
+social div i{
+    font-size: 20px;
+    color: maroon;
+    margin: auto 0 auto 0;
+}
+paginador{
+    grid-area: paginador;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: .5vw;
+}
+pegajoso{
+    grid-area: pegajoso;
+    height: 1px;
+    display: flex;
+    justify-content: right;
+    position: sticky;
+    top:35px;
+    z-index: 22;
+
+}

@@ -1,0 +1,214 @@
+.ENCcontenedor{
+    display: grid;
+    grid-template-columns: calc(35px + 5vw + 5vh) 1fr 1fr calc(100px + 20vw); 
+    height: 10vh;
+    min-height: 60px;
+}
+.ENClogo{
+    height: calc(20px + 5vw + 5vh);
+    width: auto;
+    min-height: 58px;
+    min-width: 58px;
+    max-width: calc(20px + 5vw + 5vh);
+    max-height: 10vh;
+    margin: auto;
+}
+.ENCtextTitulo{
+    font-family: cooper;
+    margin: auto;
+    font-size: calc(8px + 2.2vw);
+    text-align: center;
+    white-space: nowrap;
+}
+.ENCusuario{
+    min-width: calc(120px + 12vw);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.ENCbotones{
+    display: flex;
+    width: 98%;
+    flex-direction: row;
+    justify-content:right;
+    height: 4vh;
+    min-height: 25px;
+    border: 1px solid black;
+}
+.ENClblCheckBox {
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    margin: auto 0 auto 5px;
+    text-align: center;
+    font-size: calc(10px + .5vw);
+    color: maroon;
+    border: 1px solid transparent;
+}
+.ENClblCheckBox:hover{
+    border: 1px solid maroon;
+}
+.CartelID{
+    border: 1px solid orange;
+    font-size: calc(10px + .4vw);
+    margin: auto auto auto 0 ;
+}
+.ENCbuscador{
+    margin: auto;
+    width: 98%;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+    column-gap: .6vw;
+}
+.ENCbuscador input{
+    justify-self: right;
+    max-height: 20px;
+    margin: auto 0 auto 0;
+    width: 20vw;
+}
+
+.ENCbuscador div{
+    display: flex;
+    justify-content: right;
+}
+
+.ENCcarrito{
+    width: calc(15px + 1vw);
+    height: calc(15px + 1vw);
+    font-size: calc(8px + .9vw);
+    border: 1px solid blue;
+}
+
+
+
+#ENCiconUsr{
+    display: none;
+}
+#ENCiconUsr  ~ .ENCform{
+    top: -200px;
+}
+#ENCiconUsr:checked  ~ .ENCform{
+    top: 28px;
+    transition: top 1s ease;
+}
+#ENCiconUsr:checked  ~ label.ENClblCB{
+    background-color: burlywood;
+    border: 1px solid maroon;
+}
+#ENCiconUsr:not(checked)  ~ .ENCform{
+    top: -200px;
+    transition: top .6s ease;
+} 
+#ENCiconUsr:not(checked)  ~ .ENClblCB{
+    background-color: transparent;
+} 
+
+.ENCform{
+    position: absolute ;
+    top: -150px;
+    right: calc(-8px +  3vw);
+    display: inline-flex;
+    height: 20vh;
+    min-height: 100px;
+    min-width: 230px;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    row-gap: 0;
+    background: burlywood;
+    padding: 0px 5px 0px 5px;
+    z-index: 75;
+}
+.ENCitemForm{
+    margin: 0px 0 0 0;
+    height: 20%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.ENCitemForm div label{
+    display:inline-block;
+    font-size: calc(10px + .3vw);
+    white-space: nowrap;
+    min-width: calc(35px + 4vw);
+    width: 20%;
+    text-align: right;
+}
+.ENCitemForm div{
+    white-space: nowrap;
+}
+.ENCinput{
+    background-color: inherit;
+    border: 0;
+    border-bottom: 1px solid black;
+    font-size: calc(9px + .4vw);
+    display: inline-block;
+}
+#NomUsuario{
+    max-width: min-content;
+    min-width: 140px;
+}
+#ClaUsuario{
+    width: 9vw;
+}
+.ENCboton{
+    justify-self: center;
+    border:2px solid burlywood;
+    background-color: brown;
+    color: burlywood;
+    font-size: calc(12px + 1vh);
+    font-weight: bold;
+    border-radius: 50%;
+    width: calc(10px + 3vh);
+    height: calc(10px + 3vh);
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.ENCanchor{
+    font-size: calc(8px + .5vw);
+    text-decoration: none;
+    color:maroon;
+}
+.ENCanchor:hover{
+    text-decoration: underline;
+}
+
+
+@media only screen and (min-width: 415px) {
+    .ENClogo{
+        grid-column: 1 / 2;
+    }
+    .ENCtitulo{
+        display: inline-flex;
+        grid-column:2 / 4;
+    }
+    .ENCusuario{
+        grid-column:4 / 5;
+    }
+    #NomUsuario{
+        width: 15vw;
+    }
+    }
+
+@media only screen and (max-width: 414px) {
+    .ENClogo{
+        grid-column: 1 / 2;
+    }
+    .ENCtitulo{
+        display: none;
+        grid-column:2 / 2;
+    }
+    .ENCusuario{
+        grid-column:2 / 5;
+    }
+    #NomUsuario{
+        width: 80vw;
+    }
+    .ENCbuscador input{
+        width: 50vw;
+    }
+    }

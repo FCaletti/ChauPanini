@@ -1,0 +1,170 @@
+.TRJcontenedor{
+    display: grid;
+    width: 98%;
+    margin: 10px auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 20vw));
+    grid-auto-rows: 400px;
+    grid-row-gap: 5vh;
+    grid-column-gap: 1.5vw;
+    justify-content: space-around;
+}
+.TRJcontenedor a{
+    text-decoration: none;
+}
+.TRJcelda{
+    background-color:whitesmoke;
+    color:black;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    min-width: 250px;
+    max-width: 310px;
+    border: 1px solid grey;
+    box-shadow: -2px 2px 5px gray;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(300px, 5fr) minmax(20px, 1.5fr) minmax(30px, 1fr) minmax(10px, 1fr);
+    grid-row-gap: 1px;
+}
+.TRJoferta{
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    background-color: red;
+    z-index: 15;
+    justify-self: right;
+    font-size: 10px;
+}
+.TRJoferta span{
+    font-size: 15px;
+    margin: auto;
+    color: white;
+}
+
+.TRJofertaG{
+    font-family: Jugador;
+    position: absolute;
+    width: 20%;
+    min-width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: red;
+    z-index: 15;
+    border-radius: 0px 0px 15px 0px;
+}
+.TRJofertaG span{
+    font-size: calc(18px + .7vw);
+    text-align: center;
+    color: white;
+    margin: 5px;
+    width: 100%;
+    border: 1px solida white;
+}
+
+.TRJnoOferta{
+    position: absolute;
+    background-color: transparent;
+    z-index: 15;
+}
+.TRJImagen{
+    margin: 10px auto;
+    width: auto;
+    height: 95%;
+    max-width: 100%;
+    max-height: 100%;
+}
+.TRJrenglon1{
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
+    margin-right: 2%;
+}
+.TRJrenglon2{
+    display:flex;
+    flex-direction: row;
+}
+.TRJprecioElem{
+    font-size: 1.25rem;
+    font-style: italic;
+    font-weight: bolder;
+    margin: auto 0px auto 5px;
+    text-align: left;
+    width: 50%;
+}
+.TRJconsumo{
+    font-size: .9rem;
+    margin: auto 15px auto 5px;
+    text-align: right;
+}
+
+.TRJbotonComprar{
+    width: 50%;
+    margin: auto 0px auto 5px;
+}
+
+.TRJbotonComprar button{
+    background-color: var(--colorBotonGaleria);
+    margin: auto;
+    height: 90%;
+    color: var(--colorTextoBoton);
+    border: 1.5px solid var(--colorTextoBoton);
+    border-radius: 8px;
+    font-size: calc(9px + .6vw);
+    width: 95%;
+}
+.TRJbotonComprar button:hover{
+    background-color: var(--colorTextoBoton);
+    color: var(--colorBotonGaleria);
+    border: 1.5px solid var(--colorBotonGaleria);
+}
+
+.TRJsinStock{
+    width: 50%;
+    margin: auto 5px auto 5px;
+    background-color: var(--colorSinStock);
+    color: var(--colorTextoBoton);
+    border: 1.5px solid var(--colorTextoBoton);
+    border-radius: 8px;
+    font-size: calc(9px + .6vw);
+}
+
+.TRJiconoTarj{
+    color: rgb(115, 115, 115);
+    font-size: 24px;
+}
+
+.TRJerror{
+    color:var(--colorTexto);
+    font-family: Jugador;
+    font-size: 20px;
+    margin-left: 5vw;
+}
+@media only screen and (min-width: 1600px) {
+    .TRJjustCont{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 1200px) and (max-width:1599px) {
+    .TRJjustCont{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1199px) {
+    .TRJjustCont{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width:767px) {
+    .TRJjustCont{
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (min-width: 200px) and (max-width:319px) {
+    .TRJjustCont{
+        justify-content: center;
+    }
+}

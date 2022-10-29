@@ -1,0 +1,66 @@
+
+body{
+    background-color: var(--colorFondo);
+    margin: 0px;
+    font-family: Texto;
+    max-width: 100vw;
+    min-height: 100vh;
+}
+.grilla0{
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    row-gap: 1px;
+}
+.pagina{
+    margin: auto 4px auto 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid maroon;
+    color: maroon;
+    font-size: calc(8px + .5vw);
+}
+@media only screen and (min-width: 720px) {
+    .grilla0{
+        grid-template-columns: 1fr 8fr;
+        grid-template-rows: minmax(80px, 10vh) minmax(28px, .4fr) 1px auto .5fr 1fr;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "pegajoso pegajoso"
+        "aside main"
+        "social paginador"
+        "footer footer";
+    }
+    aside{
+        max-height: none;
+        max-width: none;
+        position:relative;
+        top:none;
+        z-index: none;
+        }
+}
+
+@media only screen and (max-width: 720px) {
+    .grilla0{
+        grid-template-columns: 1fr 7fr;
+        grid-template-rows: minmax(80px, 20vh) minmax(28px, .4fr) 1px auto .4fr .5fr 1fr;
+        /* grid-template-rows: minmax(60px, 10vh) minmax(28px, .4fr) 1px auto .4fr .5fr 1fr; */
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "pegajoso pegajoso"
+        "aside main"
+        "paginador paginador"
+        "social social"
+        "footer footer";
+    }
+    aside{
+        max-height: 25px;
+        max-width: 25px;
+        position:sticky;
+        top:5px;
+        z-index: 20;
+        }
+}

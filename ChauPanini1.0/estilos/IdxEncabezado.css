@@ -1,0 +1,114 @@
+.ENCcontenedor{
+    display: grid;
+    height: 100%;
+    min-height: 60px;
+}
+.ENClogo{
+    height: calc(30px + 5vw + 5vh);
+    width: auto;
+    min-height: 75px;
+    min-width: 58px;
+    max-width: calc(30px + 5vw + 5vh);
+    max-height: 19vh;
+    margin: auto 3vw auto; 
+    grid-area: logo;
+}
+.ENCtitulo{
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 10px;
+    margin: auto;
+    font-size: calc(22px + 3.5vw);  
+    color: var(--colorTexto);
+    grid-area: titulo;
+}
+.ENCtitulo t1{
+    font-family: Chau;
+}
+.ENCtitulo t2{
+    font-family: Panini;
+}
+.ENCusuario{
+    font-family:Jugador;
+    height: 85%;
+    max-height: 19vh;
+    min-width: calc(20px + 10vw + 5vh);
+    display: flex;
+    flex-direction: column;
+    color: var(--colorTexto); 
+    padding: 1px 5px 1px 5px;
+    grid-area: usuario;
+}
+.CartelID{
+    font-size: calc(15px + .8vw);
+    margin: auto;
+}
+
+.CartelVisita{
+    font-size: calc(8px + 1vw);
+    margin: auto 10px auto;
+    text-align: right;
+    white-space: nowrap;
+}
+
+@media only screen and (min-width: 720px) {
+    .ENCcontenedor{
+        grid-template-columns: 2.5fr 5fr 2.5fr;
+        grid-template-areas: 
+        "logo titulo usuario";
+    }
+    .ENCusuario{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .ENCcontenedor{
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows:1fr 5fr;
+        grid-template-areas: 
+        "usuario usuario"
+        "logo titulo";
+    }
+    .ENCusuario{
+        flex-direction: row;
+    }
+
+}
+
+/* 
+@media only screen and (min-width: 415px) {
+    .ENClogo{
+        grid-column: 1;
+    }
+    .ENCtitulo{
+        display: inline-flex;
+        grid-column:2;
+        flex-direction: row;
+    }
+    .ENCusuario{
+        grid-column:3;
+    }
+    #NomUsuario{
+        width: 15vw;
+    }
+    }
+
+@media only screen and (max-width: 414px) {
+    .ENClogo{
+        grid-column: 1 / 2;
+    }
+    .ENCtitulo{
+        display: none;
+        grid-column:2 / 2;
+    }
+    .ENCusuario{
+        grid-column:2 / 5;
+    }
+    #NomUsuario{
+        width: 80vw;
+    }
+    .ENCbuscador input{
+        width: 50vw;
+    } 
+*/

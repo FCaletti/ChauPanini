@@ -1,0 +1,79 @@
+[
+   {
+      "id": "Icon01",
+      "texto": "Ingresar como Usuario",
+      "svg": "ic-user",
+      "condicion": "sinUSR",
+      "link" : "#/ingreso"
+   },
+   {
+      "id": "Icon02",
+      "texto": "Nuevo Usuario",
+      "svg": "ic-baby",
+      "condicion": "sinUSR",
+      "link" : "#/nuevoUsr"
+   },
+   {
+      "id": "Icon03",
+      "texto": "Ingresar como invitado",
+      "svg": "ic-address-card",
+      "condicion": "sinUSR",
+      "link" : "#/galeria"
+   },
+   {
+      "id": "Icon04",
+      "texto": "Galeria",
+      "svg": "ic-libro-ab",
+      "condicion": "conUSR",
+      "link" : "#/galeria"
+   },
+   {
+      "id": "Icon05",
+      "texto": "Comprar Figus",
+      "svg": "ic-carrito",
+      "condicion": "conUSR",
+      "link" : "./galeria/catalogo.html"
+   },
+   {
+      "id": "Icon06",
+      "texto": "Tu Album de Figus",
+      "svg": "ic-figus",
+      "condicion": "conUSR",
+      "link" : "#/tualbum"
+   },
+   {
+      "id": "Icon07",
+      "texto": "Tu perfil",
+      "svg": "ic-user",
+      "condicion": "conUSR",
+      "link" : "#/tuperfil"
+   },
+   {
+      "id": "Icon08",
+      "texto": "Quienes Somos",
+      "svg": "ic-info",
+      "condicion": "siempre",
+      "link" : "#/quienesomos"
+   },
+   {
+      "id": "Icon09",
+      "texto": "Contactos",
+      "svg": "ic-mail2",
+      "condicion": "siempre",
+      "link" : "#/contactos"
+   },
+   {
+      "id": "Icon10",
+      "texto": "Configuracion",
+      "svg": "ic-config-3",
+      "condicion": "conUSR",
+      "link" : "#/config"
+   },
+   {
+      "id": "Icon11",
+      "texto": "Cerrar Sesión",
+      "svg": "ic-salir",
+      "condicion": "conUSR",
+      "link" : "#/logout"
+   }
+]

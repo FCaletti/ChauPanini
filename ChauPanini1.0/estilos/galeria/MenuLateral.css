@@ -1,0 +1,249 @@
+/* --- agrega caracteristicas al nav definido en areas.css*/
+nav{
+    position:sticky;
+    top:0px;
+    z-index: 21;
+}
+
+/* --- agrega caracteristicas al aside definido en areas.css*/
+aside{
+    max-height: 105px;
+    max-width: 160px;
+    position:sticky;
+    top:35px;
+    z-index: 20;
+}
+
+
+.MNLnavegador{
+    display:inline-flex;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid black;
+    padding-left: 10px;
+    background-color: white;
+    text-align: left;
+}
+
+/* Ocultamos el input. */
+#MNLmenu {
+    display: none;
+}
+
+.MNLOferta {
+    display: flex;
+    flex-direction: row;
+    height: 20px;
+    align-items: flex-start;
+    justify-items: center;
+    font-weight: bold;
+    font-size: calc(9px + .3vw);
+    padding-top: 4px;
+}
+    
+/*Damos estilos a los elementos de la lista*/
+[class^="MNLulCat"]{
+    position: relative;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding: 0px;
+    width: inherit;
+}
+[class^="MNLulCat"] li
+ {
+    display: block;
+    margin: 0 0 0 10px;
+    padding: 3px;
+    list-style: none;
+    font-size: calc(9px + .3vw);
+    text-decoration: none;
+    color: black;
+}
+/*Estilo cuando el mouse pasa encima de cada link del menu*/
+[class^="MNLulCat"] li a:hover
+{
+    filter: brightness(110%);
+    text-decoration: underline;
+}
+
+[class^="MNLulCat"] li a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* Ocultamos los input. */
+[ID^="MNLidCat"] {
+    display: none;
+    position: relative;
+}
+
+/* con input:checked ~ ul modificamos el estilo de la lista ul 
+cuando el checkbox esté seleccionado (checked), 
+por lo que allí es dónde modificamos el display de la lista, 
+logrando que se visualice cuando el checkbox está marcado */
+#MNLidCat001:checked  ~ .MNLulCat001,
+#MNLidCat002:checked  ~ .MNLulCat002,
+#MNLidCat003:checked  ~ .MNLulCat003,
+#MNLidCat004:checked  ~ .MNLulCat004,
+#MNLidCat005:checked  ~ .MNLulCat005,
+#MNLidCat006:checked  ~ .MNLulCat006,
+#MNLidCat007:checked  ~ .MNLulCat007,
+#MNLidCat008:checked  ~ .MNLulCat008,
+#MNLidCat009:checked  ~ .MNLulCat009,
+#MNLidCat010:checked  ~ .MNLulCat010
+{
+    display:block;
+}
+#MNLidCat001:not(checked)  ~ .MNLulCat001,
+#MNLidCat002:not(checked)  ~ .MNLulCat002,
+#MNLidCat003:not(checked)  ~ .MNLulCat003,
+#MNLidCat004:not(checked)  ~ .MNLulCat004,
+#MNLidCat005:not(checked)  ~ .MNLulCat005,
+#MNLidCat006:not(checked)  ~ .MNLulCat006,
+#MNLidCat007:not(checked)  ~ .MNLulCat007,
+#MNLidCat008:not(checked)  ~ .MNLulCat008,
+#MNLidCat009:not(checked)  ~ .MNLulCat009,
+#MNLidCat010:not(checked)  ~ .MNLulCat0010
+{
+    display:none;
+}
+
+/* Modificamos el label de la checkbox de cada opcion*/
+[class^="MNLlblCat"],
+[class^="MNLlblCat"] a {
+    text-decoration: none;
+    box-sizing: border-box;
+    width: 160px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+    color: black;
+
+}
+[class^="MNLlblCat"] {
+    font-weight: bold;
+    font-size: calc(9px + .3vw);
+}
+[class^="MNLlblCat"]:hover,
+[class^="MNLlblCat"] a:hover {
+    text-decoration: underline;
+}
+
+.MNLSegnal{
+    /* 
+    display: inline-block; 
+    */
+    font-size: 15px;
+    margin-left: 3px;
+    transition: transform .2s ease-in-out;
+}
+
+/* Estilo del boton cuando el menú está expandido*/
+#MNLidCat001:checked ~ .MNLlblCat001,
+#MNLidCat002:checked ~ .MNLlblCat002,
+#MNLidCat003:checked ~ .MNLlblCat003,
+#MNLidCat004:checked ~ .MNLlblCat004,
+#MNLidCat005:checked ~ .MNLlblCat005,
+#MNLidCat006:checked ~ .MNLlblCat006,
+#MNLidCat007:checked ~ .MNLlblCat007,
+#MNLidCat008:checked ~ .MNLlblCat008,
+#MNLidCat009:checked ~ .MNLlblCat009,
+#MNLidCat010:checked ~ .MNLlblCat010
+{
+    font-weight: bolder; 
+}
+
+#MNLidCat001:checked ~ .MNLlblCat001 .MNLSegnal,
+#MNLidCat002:checked ~ .MNLlblCat002 .MNLSegnal,
+#MNLidCat003:checked ~ .MNLlblCat003 .MNLSegnal,
+#MNLidCat004:checked ~ .MNLlblCat004 .MNLSegnal,
+#MNLidCat005:checked ~ .MNLlblCat005 .MNLSegnal,
+#MNLidCat006:checked ~ .MNLlblCat006 .MNLSegnal,
+#MNLidCat007:checked ~ .MNLlblCat007 .MNLSegnal,
+#MNLidCat008:checked ~ .MNLlblCat008 .MNLSegnal,
+#MNLidCat009:checked ~ .MNLlblCat009 .MNLSegnal,
+#MNLidCat010:checked ~ .MNLlblCat010 .MNLSegnal
+{
+    transform: rotate(90deg) translate(2px, -2px);
+}
+#MNLidCat001:not(checked) ~ .MNLlblCat001 .MNLSegnal,
+#MNLidCat002:not(checked) ~ .MNLlblCat002 .MNLSegnal,
+#MNLidCat003:not(checked) ~ .MNLlblCat003 .MNLSegnal,
+#MNLidCat004:not(checked) ~ .MNLlblCat004 .MNLSegnal,
+#MNLidCat005:not(checked) ~ .MNLlblCat005 .MNLSegnal,
+#MNLidCat006:not(checked) ~ .MNLlblCat006 .MNLSegnal,
+#MNLidCat007:not(checked) ~ .MNLlblCat007 .MNLSegnal,
+#MNLidCat008:not(checked) ~ .MNLlblCat008 .MNLSegnal,
+#MNLidCat009:not(checked) ~ .MNLlblCat009 .MNLSegnal,
+#MNLidCat010:not(checked) ~ .MNLlblCat010 .MNLSegnal
+{
+    transform: rotate(0deg);
+}
+
+.MNLlblMenu {
+    box-sizing: border-box;
+    border: 1px solid maroon;
+    border-radius: 5px;
+    width: 25px;
+    height: 25px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    color: maroon;
+    position:sticky;
+    top:5px;
+}
+
+
+@media only screen and (max-width: 720px) {
+    aside{
+        background-color: var(--colorMenu2);
+        top:0px;
+    }
+    #MNLmenu  ~ .MNLnavegador{
+        left: -270px;
+    }
+    .MNLlblMenu {
+        display: inline-block;
+        margin-top: 0.5vh;
+    }
+    .MNLnavegador{
+    max-width: 145px;
+    }
+    #MNLmenu:checked  ~ .MNLnavegador{
+        left: 0px;
+        transition: left 1s ease;
+    }
+    #MNLmenu:checked  ~ .MNLlblMenu{
+        color: burlywood;
+        background-color: maroon;
+    }
+    #MNLmenu:not(checked)  ~ .MNLnavegador{
+        left: -270px;
+        transition: left .6s ease;
+    } 
+    #MNLmenu:not(checked)  ~ .MNLlblMenu{
+        background-color: var(--colorTexto);
+    } 
+}
+
+@media only screen and (min-width: 720px) {
+    .MNLlblMenu {
+        background-color: transparent;
+        display:none;
+    }
+.MNLnavegador{
+    max-width: 160px;
+    }
+    #MNLmenu  ~ .MNLnavegador{
+        left: 0px;
+        top:0px;
+        position:sticky;
+        top:5px;
+    } 
+}
+

@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="0;URL=http:./Vista/catalogo.html" /> -->
+    <title>ChauPanini - Galeria</title>
+
+<!-- CARGA DE ESTILOS -->
+    <link rel="stylesheet" href="../estilos/global/seteo.css">
+    <link rel="stylesheet" href="../estilos/global/areas.css">
+    <link rel="stylesheet" href="../estilos/global/Encabezado.css">
+    <link rel="stylesheet" href="../estilos/global/nenuSup.css">
+    <link rel="stylesheet" href="../estilos/global/iconos.css">
+    <link rel="stylesheet" href="../estilos/global/footer.css">
+    <link rel="stylesheet" href="../estilos/galeria/galeria.css">
+    <link rel="stylesheet" href="../estilos/galeria/MenuLateral.css">
+    <link rel="stylesheet" href="../estilos/galeria/tarjetas.css">
+    <link rel="stylesheet" href="../estilos/galeria/pegajoso.css">
+
+<!-- CARGA DE CODIGO -->
+    <script src="../scripts/global/gestionUsr.js"></script>
+
+    <script lang="javascript">
+        //variables globales
+
+        let vg = 'hola';
+        let glob;
+        let glob2;
+        let accesosInicio = [];
+        let datosUsr = JSON.parse(localStorage.getItem("datosUsr"))
+        let usuario = (localStorage.getItem("usuario") == null)? '' : localStorage.getItem("usuario")
+        let clave = (localStorage.getItem("pass") == null)? '' : localStorage.getItem("pass")
+
+    </script>
+</head>
+<body>
+<div class="grilla0" id="raiz">
+    <header>
+        <div class="ENCcontenedor">
+            <img class="ENClogo" src="../recursos/Img/LogoQatar.PNG" alt="">
+            <div class="ENCtitulo">
+                <t1>Chau</t1><t2>&nbsp;Panini</t2>
+            </div>
+            <div class="ENCusuario">
+                <div id="Saludo" class="CartelID" title="Haz clic aquí para identificarte">Bienvenida/o como te va</div>
+                <div class="ENCbuscador">
+                    <input type="text">
+                    <a class="ENClblCheckBox" href="#"><i class="ic-lupa"></i></a>
+                    <div class="ENClblCheckBox"  title="Borra el texto de búsqueda"><i class="ic-cruz"></i></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <div class="NAVnavegador">
+        <!-- <div> -->
+            <ul class="NAVtxtMenu NAVMenu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Catálogo</a></li>
+                <li><a href="#">Ver Album</a></li>
+                <li><a href="#">Quienes Somos</a></li>
+                <li><a href="#">Contactos</a></li>
+            </ul>
+            <ul class="NAVicoMenu NAVMenu">
+                <li><a href="#"><i class="ic-home"></i></a></li>
+                <li><a href="#"><i class="ic-libro-ab"></i></a></li>
+                <li><a href="#"><i class="ic-figus"></i></a></li>
+                <li><a href="#"><i class="ic-info"></i></a></li>
+                <li><a href="#"><i class="ic-mail2"></i></a></li>
+            </ul>
+        <!-- </div> -->
+        </div>
+    </nav>
+    <aside>
+        <input type="checkbox" id="MNLmenu">
+        <label  class="MNLlblMenu" for="MNLmenu"> ☰ </label>
+        <div class="MNLnavegador">
+            <div class="MNLOferta">
+                <input type="checkbox" id="MNLidOferta">
+                <label for="MNLidOferta">&nbsp;  Solo Ofertas</label>
+            </div>
+            <div class="MNLlblCat000">
+                <a href="#"><i class="ic-cruz"></i>Todos los paises</a>
+            </div>
+            <div class="MNLlblCat000">
+                <a href="#">Selecciones</a>
+            </div>
+            <div>
+                <input type="checkbox" id="MNLidCat001">
+                <label class="MNLlblCat001" for="MNLidCat001">
+                    Grupo A
+                    <span class="MNLSegnal"><i class="ic-angulo-der"></i></span>
+                </label>
+                <ul class="MNLulCat001">
+                    <li><a href="#">Qatar</a></li>
+                    <li><a href="#">Ecuador</a></li>
+                    <li><a href="#">Senegal</a></li>
+                    <li><a href="#">Paises Bajos</a></li>
+                </ul>
+            </div>
+            <input type="checkbox" id="MNLidCat002">
+            <label class="MNLlblCat002" for="MNLidCat002">
+                Categoria 2 
+                <span class="MNLSegnal"><i class="ic-angulo-der"></i></span>
+            </label>
+            <ul class="MNLulCat002">
+                <li>Cat2 - Valor 1</li>
+                <li>Cat2 - Valor 2</li>
+                <li>Cat2 - Valor 3</li>
+                <li>Cat2 - Valor 4</li>
+            </ul>
+            <input type="checkbox" id="MNLidCat003">
+            <label class="MNLlblCat003" for="MNLidCat003">
+                Categoria 3 
+                <span class="MNLSegnal"><i class="ic-angulo-der"></i></span>
+            </label>
+            <ul class="MNLulCat003">
+                <li>Cat3 - Valor 1</li>
+                <li>Cat3 - Valor 2</li>
+                <li>Cat3 - Valor 3</li>
+                <li>Cat3 - Valor 4</li>
+            </ul>
+            <input type="checkbox" id="MNLidCat004">
+            <label class="MNLlblCat004" for="MNLidCat004">
+                Categoria 4 
+                <span class="MNLSegnal"><i class="ic-angulo-der"></i></span>
+            </label>
+            <ul class="MNLulCat004">
+                <li>Cat4 - Valor 1</li>
+                <li>Cat4 - Valor 2</li>
+                <li>Cat4 - Valor 3</li>
+                <li>Cat4 - Valor 4</li>
+            </ul>
+            <input type="checkbox" id="MNLidCat005">
+            <label class="MNLlblCat005" for="MNLidCat005">
+                Categoria 5 
+                <span class="MNLSegnal"><i class="ic-angulo-der"></i></span>
+            </label>
+            <ul class="MNLulCat005">
+                <li>Cat5 - Valor 1</li>
+                <li>Cat5 - Valor 2</li>
+                <li>Cat5 - Valor 3</li>
+                <li>Cat5 - Valor 4</li>
+            </ul>
+        </div>
+    </aside> 
+    <main>
+<!--
+        <div class="INXgrllaLogos">
+        <a href="#" class="INXlogo" data-tipo="global" id="Icon01">
+            <div class="INXiconoTxt">Ingresar como Usuario</div>
+            <div class="INXicono"><i class="ic-user"></i></div>
+        </a>
+        <a href="#" class="INXlogo" data-tipo="global" id="Icon02">
+            <div class="INXiconoTxt">Nuevo Usuario</div>
+            <div class="INXicono"><i class="ic-baby"></i></div>
+        </a>
+        <a href="./vista/catalogo.html" class="INXlogo" data-tipo="global" id="Icon03">
+            <div class="INXiconoTxt">Ingresar como invitado</div>
+            <div class="INXicono"><i class="ic-address-card"></i></div>
+        </a>
+        <a href="./vista/QuienesSomos.html" class="INXlogo" data-tipo="global" id="Icon04">
+            <div class="INXiconoTxt">Quienes Somos</div>
+            <div class="INXicono"><i class="ic-info"></i></div>
+        </a>
+        <a href="./vista/QuienesSomos.html#contacto" class="INXlogo" data-tipo="global" id="Icon05">
+            <div class="INXiconoTxt">Contactos</div>
+            <div class="INXicono"><i class="ic-mail2"></i></div>
+        </a>
+        <a href="./vista/catalogo.html" class="INXlogo" data-tipo="global" id="Icon06">
+            <div class="INXiconoTxt">Catálogo</div>
+            <div class="INXicono"><i class="ic-clipboard2"></i></div>
+        </a>
+        <a href="#" class="INXlogo" data-tipo="global" id="Icon07">
+            <div class="INXiconoTxt">Estadísticas</div>
+            <div class="INXicono"><i class="ic-grafico"></i></div>
+        </a>
+        <a href="./vista/verPedido.html" class="INXlogo" data-tipo="global" id="Icon08">
+            <div class="INXiconoTxt">Carrito</div>
+            <div class="INXicono"><i class="ic-carrito"></i></div>
+        </a>
+        <a href="#" class="INXlogo" data-tipo="global" id="Icon09">
+            <div class="INXiconoTxt">Tu perfil</div>
+            <div class="INXicono"><i class="ic-user"></i></div>
+        </a>
+        <a href="#" class="INXlogo" data-tipo="global" id="Icon10">
+            <div class="INXiconoTxt">Configurar</div>
+            <div class="INXicono"><i class="ic-config-3"></i></div>
+        </a>
+        <a href="./vista/catalogo.html" class="INXlogo" data-tipo="global" id="Icon06">
+            <div class="INXiconoTxt">Catálogo</div>
+            <div class="INXicono"><i class="ic-clipboard2"></i></div>
+        </a>
+        <a href="#" class="INXlogo" data-tipo="global" id="Icon07">
+            <div class="INXiconoTxt">Estadísticas</div>
+            <div class="INXicono"><i class="ic-grafico"></i></div>
+        </a>
+        </div>
+
+-->
+<div class="TRJcontenedor TRJjustCont">
+    <a href="./verElemento.html">
+    <div class="TRJcelda">
+        <div class="TRJoferta"><span>Oferta</span></div>
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_00.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Qatar</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJbotonComprar"><button>Comprar</button></div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+    </a>
+    <div class="TRJcelda">
+        <div class="TRJoferta"><span>Oferta</span></div>
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_01.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Saad Al Sheeb</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJsinStock">Sin Stock</div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+    <div class="TRJcelda">
+        <div class="TRJoferta"><span>Oferta</span></div>
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_02.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Qatar</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJbotonComprar"><button>Comprar</button></div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+    <div class="TRJcelda">
+        <div class="TRJnoOferta"><span></span></div>
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_03.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Qatar</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJbotonComprar"><button>Comprar</button></div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+    <div class="TRJcelda">
+        <div class="TRJnoOferta"><span></span></div>
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_04.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Qatar</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJbotonComprar"><button>Comprar</button></div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+    <div class="TRJcelda">
+        <div class="TRJnoOferta"><span></span></div>
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_05.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Qatar</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJbotonComprar"><button>Comprar</button></div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+    <div class="TRJcelda">
+        <div>
+            <img class="TRJImagen" src="../recursos/Img/figus/01_06.jpg" alt="">
+        </div>
+        <div class="TRJrenglon1">Qatar</div>
+        <div class="TRJrenglon2">
+            <div class="TRJprecioElem">AR$ 1.000</div>
+            <div class="TRJbotonComprar"><button>Comprar</button></div>
+        </div>
+        <div class="TRJconsumo">30 compras mensuales</div>
+    </div>
+</div>
+<!--
+    <div class="TRJerror"> ERROR AL LEER LOS DATOS</div>
+    -->
+</main>
+    <footer>
+        <div class="FOOtitulo">
+            2020-2026 - Puertobyte - Agencia de comunicación y marketing digital - Chivilcoy - Argentina
+        </div>
+        <div class="FOOtitulo FOOicono">
+            <i class="ic-mail2"></i>
+        </div>
+    </footer>
+    <pegajoso>
+        <div class="PGJcarrito PGJlleno">
+            <a href="./verPedido.html"><i class="ic-carrito"></i></a>
+            <div class="PGJnumero">1</div>
+        </div>
+    </pegajoso> 
+</div>
+</body>
+<script>
+//    document.querySelector("#Ingresar").addEventListener("click", btn_ingresar)
+//    document.querySelector("#Cancelar").addEventListener("click", btn_noIngresar)
+
+</script>
+</html>

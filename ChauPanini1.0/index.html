@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./estilos/global/seteo.css">
+    <link rel="stylesheet" href="./estilos/global/areas.css">
+    <link rel="stylesheet" href="./estilos/index.css">
+    <link rel="stylesheet" href="./estilos/IdxEncabezado.css">
+    <link rel="stylesheet" href="./estilos/IdxGestionUsr.css">
+    <link rel="stylesheet" href="./estilos/global/iconos.css">
+    <link rel="stylesheet" href="./estilos/global/footer.css">
+
+    <script src="./scripts/global/gestionUsr.js"></script>
+
+    <script defer type="module" src="./scripts/index.js"></script>
+    <title>Document</title>
+</head>
+
+<script lang="javascript">
+
+//*****************variables globales **************
+    
+let arrayDatos = []; // array donde se van a almacenar los datos a mostrar. Se carga desde una api o desde un jSON en 
+
+let datosUsr = leeUsr();
+
+// obtengo valores del usuario activo
+let usuario = (localStorage.getItem("usuario") == null)? '' : localStorage.getItem("usuario")
+let clave = (localStorage.getItem("pass") == null)? '' : localStorage.getItem("pass")
+if (usuario != datosUsr.usuario || clave != datosUsr.pass){ 
+    usuario = pass = ''
+}
+
+</script>
+
+<body>
+<div class="grilla0" id="raiz"></div>
+</body>
+
+</html>

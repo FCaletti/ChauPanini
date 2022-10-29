@@ -1,0 +1,228 @@
+.LSPtitulo{
+    font-family: Jugador;
+    height: 6vh;
+    width: 40%;
+    line-height: 6vh;
+    margin: 5px auto;
+    font-size: calc(12px + 1.5vw);
+    text-align: center;
+    font-variant:small-caps;
+    color: var(--colorMenu2);
+    background-color: var(--colorTexto);
+    border: 2px solid var(--colorMenu);
+    border-radius: 15px;
+}
+
+
+.LSPcontenedor{
+    display: grid;
+    margin: 10px auto 10px auto;
+    grid-template-columns: minmax(50px, 1fr) minmax(100px, 5fr) minmax(50px, 1fr) minmax(50px, 1fr) minmax(80px, 1.5fr) .5fr;
+    grid-auto-rows: calc(12px + 2vw + 1vh);
+    grid-row-gap: 1vh;
+    grid-column-gap: 1vw;
+    background-color: var(--colorTexto);
+    min-width: 300px;
+    border: var(--colorTextoBoton);
+    padding: 6px;
+    box-shadow: -2px 2px 5px var(--colorTextoBoton);
+    border-radius: 5px;
+}
+
+.LSPcontenedorTexto{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 10px auto 10px auto;
+    background-color: var(--colorTexto);
+    min-width: 300px;
+    border: var(--colorTextoBoton);
+    padding: 6px;
+    box-shadow: -2px 2px 5px var(--colorTextoBoton);
+    border-radius: 5px;
+}
+
+.LSPtituloLis{
+    font-size: calc(4px + 1vw);
+    font-weight: bold;
+    width: 100%;
+    margin: auto;
+    color:var(--colorFondo);
+    text-align: center;
+}
+.LSPizq{
+    text-align: left;
+}
+.LSPder{
+    text-align: right;
+}
+.LSPtituloIcono{
+    margin: auto;
+    font-size: calc(2px + 1vw);
+}
+.LSPtituloIcono .ic-basura:hover{
+    color:var(--colorMenu1);
+}
+.LSPimagenElem{
+    margin: auto;
+    height: 100%;
+}
+.LSPImagen{
+    width: auto;
+    height: 90%;
+}
+.LSPnombreElem{
+    font-size: calc(4px + 1vw);
+    font-weight: bold;
+    text-align: left;
+    margin: auto 2px auto 0;
+}
+.LSPnombreElem span + span{
+    font-size: calc(3px + .7vw);
+    font-weight: none;
+    font-style: italic;
+}
+
+.LSPcantElem{
+    font-size: calc(4px + 1vw);
+    font-weight: bold;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(5px + 1vw + 1vh);
+    width: 100%;
+    line-height: calc(5px + 1vw + 1vh);
+}
+.LSPcantElem button{
+    background-color: var(--colorBotonGaleria);
+    color: var(--colorTextoBoton);
+    border: 1.5px solid var(--colorTextoBoton);
+    width: 2.5vw;
+    font-size: calc(3px + 1.1vw);
+    text-align: center;
+}
+.LSPcantElem button:hover{
+    background-color: var(--colorTextoBoton);
+    color: var(--colorBotonGaleria);
+    border: 1.5px solid var(--colorBotonGaleria);
+}
+.LSPbotMenos{
+    border-radius: 30% 0 0 30%;
+}
+.LSPbotMas{
+    border-radius: 0 30% 30% 0;
+}
+.LSPcantElem div{
+    font-style: italic;
+    color: var(--colorMenu);
+    border-top: 1.5px solid var(--colorTextoBoton);
+    border-bottom: 1.5px solid var(--colorTextoBoton);
+    width: 5vw;
+    text-align: center;
+}
+
+.LSPprecioElem{
+    font-size: calc(5px + 1.1vw);
+    font-style: italic;
+    font-weight: bolder;
+    margin: auto 5px auto 0px;
+    display: flex;
+    justify-content: right;
+}
+.LSPbotElem{
+    font-size: calc(3px + .7vw);
+    height: calc(5px + 1vw + 1vh);
+    width: 60%;
+    min-width: calc(15px + .7vw);
+    margin: 10px auto;
+    background-color: var(--colorBotonGaleria);
+    color: var(--colorTextoBoton);
+    border: 1.5px solid var(--colorTextoBoton);
+    border-radius: 15%;
+}
+.LSPbotElem:hover{
+    background-color: var(--colorTextoBoton);
+    color: var(--colorBotonGaleria);
+    border: 1.5px solid var(--colorBotonGaleria);
+}
+
+.LSPespacio{
+    grid-column: 1 / 3;
+    display: flex;
+    justify-content: right;
+}
+.LSPtotal{
+    grid-column: 4/6;
+    margin: auto 5px auto auto;
+    justify-items: right;
+}
+.LSPbotonera{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1vw;
+    justify-content: center;
+    height: 50px;
+    margin: 2vh 0 1.5vh 0;
+}
+.LSPbotonera a button{
+    background-color: var(--colorBotonGaleria);
+    height: 80%;
+    color: var(--colorTextoBoton);
+    border: 1.5px solid var(--colorTextoBoton);
+    border-radius: 8px;
+    font-size: calc(4px + 1vw);
+    width: calc(60px + 8vw);
+}
+.LSPbotonera a button:hover{
+    background-color: var(--colorTextoBoton);
+    color: var(--colorBotonGaleria);
+    border: 1.5px solid var(--colorBotonGaleria);
+}
+
+
+@media only screen and (min-width: 720px) {
+    .LSPjustCont{
+        width: 85%;
+    }
+    .LSPbotonera{
+        grid-column: 1/3;
+    }
+}
+
+@media only screen and (max-width: 719px) {
+    .LSPjustCont{
+        width: 95%;
+    }
+    .LSPbotonera{
+        grid-column: 1/2;
+    }
+}
+
+
+/* 
+@media only screen and (min-width: 1600px) {
+}
+@media only screen and (min-width: 1200px) and (max-width:1599px) {
+    .LSPjustCont{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 768px) and (max-width:1199px) {
+    .LSPjustCont{
+        justify-content: space-around;
+    }
+}
+@media only screen and (min-width: 320px) and (max-width:767px) {
+    .LSPjustCont{
+        justify-content: center;
+    }
+}
+
+
+@media only screen and (min-width: 200px) and (max-width:319px) {
+    .LSPjustCont{
+        justify-content: center;
+    }
+}
+ */

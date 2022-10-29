@@ -1,0 +1,44 @@
+.PGJcarrito{
+    position: relative;
+    width: 45px;
+    height: 44px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    right: 1vw;
+    font-size: 30px;
+}
+.PGJvacio{
+    background-color:var(--colorFondoClaro);
+    color: var(--colorMenu2);
+}
+
+.PGJlleno{
+    background-color:var(--colorFondoClaro);
+    color: var(--colorMenu1);
+}
+
+.PGJcarrito:hover{
+    filter: brightness(120%);
+}
+.PGJcarrito a{
+    color: inherit;
+}
+.PGJcarrito a i{
+    color: inherit;
+    margin: 7px 5px 7px 5px;
+}
+
+.PGJnumero{
+    position: relative;
+    background-color: var(--colorTexto);
+    font-family: Jugador;
+    font-size: 15px;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    top:0px;
+    left:10px;
+    border: 1px solid var(--colorFondoClaro);
+}

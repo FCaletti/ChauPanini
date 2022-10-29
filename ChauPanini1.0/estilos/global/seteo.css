@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Chau;
+    src: url("/recursos/fonts/BRUSHSCI.TTF");
+}
+@font-face {
+    font-family: Panini;
+    src: url("/recursos/fonts/ALGER.TTF");
+}
+@font-face {
+    font-family: Jugador;
+    src: url("/recursos/fonts/BRLNSR.TTF");
+}
+@font-face {
+    font-family: Texto;
+    src: url("/recursos/fonts/verdana.ttf");
+}
+@font-face {
+    font-family: Bauhaus93;
+    src: url("/recursos/fonts/BAUHS93.TTF");
+}
+@font-face {
+    font-family: Cooper;
+    src: url("/recursos/fonts/COOPBL.TTF");
+}
+@font-face {
+    font-family: Gabriola;
+    src: url("/recursos/fonts/Gabriola.ttf");
+}
+
+html{
+    --colorFondo : rgb(76, 32, 45);
+    --colorTexto : rgb(248, 248, 229);
+    --colorMenu : rgb(102, 33, 52);
+    --colorMenu1 : rgb(181, 16, 63);
+    --colorMenu2 : rgb(60, 28, 39);
+    --colorFondoClaro :  rgb(150, 113, 124);
+    --colorBotonGaleria : maroon;
+    --colorTextoBoton : burlywood;
+    --colorSinStock : darkslateblue;
+}
